@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Repository.Products
 {
     public class BaseColeccion<T> : IColeccion<T>
-    {
+    { 
         protected List<T> coleccion = new List<T>();
 
         public void Add(T t)

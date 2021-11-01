@@ -12,7 +12,7 @@ namespace Domain.Interfaces
     {
         List<Pro> GetByName(string Names);
 
-        List<Pro> GetByCodigo(int Codigo);
+        Pro GetByCodigo(int Codigo);
 
         void OrderByName();
 

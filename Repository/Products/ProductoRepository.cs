@@ -11,24 +11,25 @@ namespace Repository.Products
 {
     public class ProductoRepository : BaseColeccion<Pro>, IProducto
     {
-        public List<Pro> GetByCodigo(int codigo)
+        public Pro GetByCodigo(int codigo)
         {
-            return (List<Pro>)(from d in coleccion where d.Codigo == codigo select d);
+            return (Pro)coleccion.Where(p => p.Codigo == codigo);
+            //return (List<Pro>)(from d in coleccion where d.Codigo == codigo select d);
         }
 
         public List<Pro> GetByMarcas(Marca marca)
         {
-            return (List<Pro>)(from d in coleccion where d.Marca == marca select d);
+            return (from d in coleccion where d.Marca == marca select d).ToList();
         }
 
         public List<Pro> GetByName(string names)
         {
-            return (List<Pro>)(from d in coleccion where d.Nombre == names select d);
+            return coleccion.Where(p => p.Nombre == names).ToList();
         }
 
         public List<Pro> GetByPrice(decimal precio)
         {
-            return (List<Pro>)(from d in coleccion where d.Precio == precio select d);
+            return (from d in coleccion where d.Precio == precio select d).ToList();
         }
 
         public void OrderByName()

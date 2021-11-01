@@ -24,6 +24,7 @@ namespace PracticaDominical.Forms
         {
             dtaDatos.DataSource = UnidadDeTrabajo.unidadDeTrabajo.productoRepository.FindAll();
             cmbMarca.Items.AddRange(Enum.GetValues(typeof(Marca)).Cast<Object>().ToArray());
+            cmbMarcasss.Items.AddRange(Enum.GetValues(typeof(Marca)).Cast<Object>().ToArray());
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -52,6 +53,27 @@ namespace PracticaDominical.Forms
             dtaDatos.ClearSelection();
             dtaDatos.DataSource = lsi;
 
+        }
+
+        private void btnPrice_Click(object sender, EventArgs e)
+        {
+            List<Pro> lsi = UnidadDeTrabajo.unidadDeTrabajo.productoRepository.GetByPrice(decimal.Parse(textBox1.Text));
+            dtaDatos.ClearSelection();
+            dtaDatos.DataSource = lsi;
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            List<Pro> lsi = UnidadDeTrabajo.unidadDeTrabajo.productoRepository.GetByMarcas((Marca)cmbMarcasss.SelectedItem);
+            dtaDatos.ClearSelection();
+            dtaDatos.DataSource = lsi;
+        }
+
+        private void btnCodigo_Click(object sender, EventArgs e)
+        {
+            Pro lsi = UnidadDeTrabajo.unidadDeTrabajo.productoRepository.GetByCodigo(int.Parse(txtCodigot.Text));
+            dtaDatos.ClearSelection();
+            dtaDatos.DataSource = lsi;
         }
     }
 }

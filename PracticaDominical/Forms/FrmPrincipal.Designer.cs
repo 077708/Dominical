@@ -41,6 +41,12 @@ namespace PracticaDominical.Forms
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.btnGetByName = new System.Windows.Forms.Button();
             this.txtGetName = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPrice = new System.Windows.Forms.Button();
+            this.cmbMarcasss = new System.Windows.Forms.ComboBox();
+            this.btnMarcas = new System.Windows.Forms.Button();
+            this.txtCodigot = new System.Windows.Forms.TextBox();
+            this.btnCodigo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +66,7 @@ namespace PracticaDominical.Forms
             // 
             // txt
             // 
-            this.txt.Location = new System.Drawing.Point(1015, 174);
+            this.txt.Location = new System.Drawing.Point(1015, 177);
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(199, 23);
             this.txt.TabIndex = 2;
@@ -145,11 +151,70 @@ namespace PracticaDominical.Forms
             this.txtGetName.Size = new System.Drawing.Size(292, 23);
             this.txtGetName.TabIndex = 14;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(922, 489);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 23);
+            this.textBox1.TabIndex = 16;
+            // 
+            // btnPrice
+            // 
+            this.btnPrice.Location = new System.Drawing.Point(922, 518);
+            this.btnPrice.Name = "btnPrice";
+            this.btnPrice.Size = new System.Drawing.Size(292, 23);
+            this.btnPrice.TabIndex = 15;
+            this.btnPrice.Text = "GETBYPRICE";
+            this.btnPrice.UseVisualStyleBackColor = true;
+            this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
+            // 
+            // cmbMarcasss
+            // 
+            this.cmbMarcasss.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarcasss.FormattingEnabled = true;
+            this.cmbMarcasss.Location = new System.Drawing.Point(922, 431);
+            this.cmbMarcasss.Name = "cmbMarcasss";
+            this.cmbMarcasss.Size = new System.Drawing.Size(292, 23);
+            this.cmbMarcasss.TabIndex = 17;
+            // 
+            // btnMarcas
+            // 
+            this.btnMarcas.Location = new System.Drawing.Point(922, 460);
+            this.btnMarcas.Name = "btnMarcas";
+            this.btnMarcas.Size = new System.Drawing.Size(292, 23);
+            this.btnMarcas.TabIndex = 18;
+            this.btnMarcas.Text = "GETBYMARCA";
+            this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
+            // 
+            // txtCodigot
+            // 
+            this.txtCodigot.Location = new System.Drawing.Point(922, 370);
+            this.txtCodigot.Name = "txtCodigot";
+            this.txtCodigot.Size = new System.Drawing.Size(292, 23);
+            this.txtCodigot.TabIndex = 20;
+            // 
+            // btnCodigo
+            // 
+            this.btnCodigo.Location = new System.Drawing.Point(922, 399);
+            this.btnCodigo.Name = "btnCodigo";
+            this.btnCodigo.Size = new System.Drawing.Size(292, 23);
+            this.btnCodigo.TabIndex = 19;
+            this.btnCodigo.Text = "GETBYCODIGO";
+            this.btnCodigo.UseVisualStyleBackColor = true;
+            this.btnCodigo.Click += new System.EventHandler(this.btnCodigo_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 653);
+            this.Controls.Add(this.txtCodigot);
+            this.Controls.Add(this.btnCodigo);
+            this.Controls.Add(this.btnMarcas);
+            this.Controls.Add(this.cmbMarcasss);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnPrice);
             this.Controls.Add(this.txtGetName);
             this.Controls.Add(this.btnGetByName);
             this.Controls.Add(this.cmbMarca);
@@ -185,5 +250,11 @@ namespace PracticaDominical.Forms
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.Button btnGetByName;
         private System.Windows.Forms.TextBox txtGetName;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnPrice;
+        private System.Windows.Forms.ComboBox cmbMarcasss;
+        private System.Windows.Forms.Button btnMarcas;
+        private System.Windows.Forms.TextBox txtCodigot;
+        private System.Windows.Forms.Button btnCodigo;
     }
 }
