@@ -14,7 +14,7 @@ namespace Domain.Interfaces
 
         Pro GetByCodigo(int Codigo);
 
-        void OrderByName();
+        List<Pro> OrderByName();
 
         List<Pro> GetByPrice(decimal precio);
 

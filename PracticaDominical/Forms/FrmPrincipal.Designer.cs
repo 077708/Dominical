@@ -47,6 +47,8 @@ namespace PracticaDominical.Forms
             this.btnMarcas = new System.Windows.Forms.Button();
             this.txtCodigot = new System.Windows.Forms.TextBox();
             this.btnCodigo = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,11 +206,32 @@ namespace PracticaDominical.Forms
             this.btnCodigo.UseVisualStyleBackColor = true;
             this.btnCodigo.Click += new System.EventHandler(this.btnCodigo_Click);
             // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(922, 341);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(292, 23);
+            this.btnOrder.TabIndex = 21;
+            this.btnOrder.Text = "ORDERBYNAME";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(922, 312);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(292, 23);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 653);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.txtCodigot);
             this.Controls.Add(this.btnCodigo);
             this.Controls.Add(this.btnMarcas);
@@ -256,5 +279,7 @@ namespace PracticaDominical.Forms
         private System.Windows.Forms.Button btnMarcas;
         private System.Windows.Forms.TextBox txtCodigot;
         private System.Windows.Forms.Button btnCodigo;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

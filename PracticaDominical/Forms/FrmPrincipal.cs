@@ -75,5 +75,13 @@ namespace PracticaDominical.Forms
             dtaDatos.ClearSelection();
             dtaDatos.DataSource = lsi;
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            List<Pro> lsi = UnidadDeTrabajo.unidadDeTrabajo.productoRepository.OrderByName();
+            dtaDatos.ClearSelection();
+
+            dtaDatos.DataSource = lsi;
+        }
     }
 }
